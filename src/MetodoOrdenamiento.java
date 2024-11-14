@@ -63,9 +63,9 @@ public class MetodoOrdenamiento {
     }
 
     // Métodos de ordenamiento
-    public void sortBubbleTradicional(int[] arregloCopia, boolean ascendente, boolean logs) {
+    public void sortBubbleTradicional(int[] arregloCopia, boolean ascendente) {
         int tamanio = arregloCopia.length;
-        if (logs) {
+     
             for (int i = 0; i < tamanio - 1; i++) {
                 for (int j = 0; j < tamanio - 1; j++) {
                     if (ascendente ? arregloCopia[j] > arregloCopia[j + 1] : arregloCopia[j] < arregloCopia[j + 1]) {  
@@ -76,12 +76,12 @@ public class MetodoOrdenamiento {
                 }
                 System.out.println(Arrays.toString(arregloCopia));
             } 
-        } 
+        
     }
 
-    public void sortBySeleccion(int[] arregloCopia, boolean ascendente, boolean logs) { 
+    public void sortBySeleccion(int[] arregloCopia, boolean ascendente) { 
         int tamanio = arregloCopia.length;
-        if (logs) {
+ 
             for (int i = 0; i < tamanio; i++) {
                 int indice = i;
                 for (int j = i + 1; j < tamanio; j++) {
@@ -96,12 +96,12 @@ public class MetodoOrdenamiento {
                 }
                 System.out.println(Arrays.toString(arregloCopia));
             }
-        } 
+        
     }
     
-    public void sortInsercion(int[] arregloCopia, boolean ascendente, boolean logs) {
+    public void sortInsercion(int[] arregloCopia, boolean ascendente) {
         int tamanio = arregloCopia.length;
-        if (logs) {
+       
             for (int i = 1; i < tamanio; i++) {
                 int aux = arregloCopia[i];
                 int j = i - 1;
@@ -113,12 +113,11 @@ public class MetodoOrdenamiento {
                 arregloCopia[j + 1] = aux;
                 System.out.println(Arrays.toString(arregloCopia));
             }
-        } 
+        
     }
 
-    public void sortBubbleAvanzado(int[] arregloCopia, boolean ascendente, boolean logs) {
+    public void sortBubbleAvanzado(int[] arregloCopia, boolean ascendente) {
         int tamanio = arregloCopia.length;
-        if (logs) {
             for (int i = 0; i < tamanio; i++) {
                 boolean intercambio = false;
                 for (int j = 0; j < tamanio - 1 - i; j++) {
@@ -134,7 +133,6 @@ public class MetodoOrdenamiento {
                     break;
                 }          
             }
-        } 
     }  
 
     // Método que ordena los arreglos y mide el tiempo de ejecución
